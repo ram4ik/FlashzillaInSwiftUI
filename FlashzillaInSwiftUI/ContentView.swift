@@ -16,7 +16,7 @@ struct ContentView: View {
                 })
                 
             Text("Long gesture")
-                .onLongPressGesture {
+                .onLongPressGesture(minimumDuration: 2) {
                     print("Long gesture pressed!")
                 }
         }
