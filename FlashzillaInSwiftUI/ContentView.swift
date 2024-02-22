@@ -9,36 +9,23 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var currentAmount = 0.0
-    @State private var finalAmount = 1.0
+    @State private var currentAmount = Angle.zero
+    @State private var finalAmount = Angle.zero
     
     var body: some View {
         VStack {
-            Text("Double tapped")
-                .onTapGesture(count: 2, perform: {
-                    print("Double tapped")
-                })
-                .padding()
-                
-            Text("Long gesture")
-                .onLongPressGesture(minimumDuration: 2) {
-                    print("Long gesture pressed!")
-                } onPressingChanged: { inProgress in
-                    print("In progress: \(inProgress)")
-                }
-                .padding()
             
             Text("Gesture")
-                .scaleEffect(finalAmount + currentAmount)
+                .rotationEffect(currentAmount + finalAmount)
                 .gesture (
-                    MagnifyGesture()
-                        .onChanged { value in
-                            currentAmount = value.magnification - 1
-                        }
-                        .onEnded { value in
+                    RotateGesture()
+                        .onChanged({ value in
+                            currentAmount = value.rotation
+                        })
+                        .onEnded({ value in
                             finalAmount += currentAmount
-                            currentAmount = 0
-                        }
+                            currentAmount = .zero
+                        })
                 )
                 .padding()
         }
