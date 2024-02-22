@@ -29,6 +29,12 @@ struct ContentView: View {
                 )
                 .padding()
         }
+        .highPriorityGesture(
+            TapGesture()
+                .onEnded({
+                    print("VStack tapped")
+                })
+        )
     }
 }
 
