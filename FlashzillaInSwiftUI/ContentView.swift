@@ -18,6 +18,8 @@ struct ContentView: View {
             Text("Long gesture")
                 .onLongPressGesture(minimumDuration: 2) {
                     print("Long gesture pressed!")
+                } onPressingChanged: { inProgress in
+                    print("In progress: \(inProgress)")
                 }
         }
     }
