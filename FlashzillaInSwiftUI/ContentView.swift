@@ -9,10 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Double tapped")
-            .onTapGesture(count: 2, perform: {
-                print("Double tapped")
-            })
+        VStack {
+            Text("Double tapped")
+                .onTapGesture(count: 2, perform: {
+                    print("Double tapped")
+                })
+                
+            Text("Long gesture")
+                .onLongPressGesture {
+                    print("Long gesture pressed!")
+                }
+        }
     }
 }
 
