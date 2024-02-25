@@ -39,7 +39,6 @@
 		525CEF352B87D26700ECB5B4 = {
 			isa = PBXGroup;
 			children = (
-				529C42DA2B8BBAEB0023CAF1 /* CardView.swift */,
 				525CEF402B87D26700ECB5B4 /* FlashzillaInSwiftUI */,
 				525CEF3F2B87D26700ECB5B4 /* Products */,
 			);
@@ -56,6 +55,7 @@
 		525CEF402B87D26700ECB5B4 /* FlashzillaInSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				529C42DA2B8BBAEB0023CAF1 /* CardView.swift */,
 				525CEF412B87D26700ECB5B4 /* FlashzillaInSwiftUIApp.swift */,
 				525CEF432B87D26700ECB5B4 /* ContentView.swift */,
 				529C42D82B8BBA190023CAF1 /* Card.swift */,
